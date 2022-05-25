@@ -29,6 +29,22 @@ var myApp = new Vue({
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
         ]
+    },
+    methods : {
+        nextThumb() {
+            this.viewThumb++;
+            if(this.viewThumb > this.slides.length - 1) {
+                this.viewThumb = 0;
+            }
+            //console.log(this.viewThumb);
+        },
+        prevThumb() {
+            this.viewThumb--;
+            if(this.viewThumb < 0) {
+                this.viewThumb = this.slides.length - 1;
+            }
+            //console.log(this.viewThumb);
+        }
     }
 });
 
