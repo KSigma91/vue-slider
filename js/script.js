@@ -44,9 +44,21 @@ var myApp = new Vue({
                 this.viewThumb = this.slides.length - 1;
             }
             //console.log(this.viewThumb);
+        },
+        clickThumb(clicked) {
+            this.viewThumb = clicked;
         }
     }
 });
+
+
+// goToImg(n) {
+//     this.currLightboxImg = n<0 ? this.imgList.length-1 : n%this.imgList.length;
+//   },
+//   goToChunk(idx) {
+//     this.transition_name = (idx < this.currSlide) ? "slide_prev" : "slide_next";
+//     this.currSlide = idx;
+//   }
 
 
 
